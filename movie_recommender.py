@@ -81,7 +81,7 @@ new_df['tags'] = new_df['tags'].apply(lambda x: " ".join(x))
 
 # Convert to lowercase
 new_df['tags'] = new_df['tags'].apply(lambda x: x.lower())
-
+new_df = new_df.head(1000)
 # Vectorization
 cv = CountVectorizer(max_features=5000, stop_words='english')
 
